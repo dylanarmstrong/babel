@@ -566,7 +566,7 @@ export type LogicalExpression = NodeBase & {
   right: Expression,
 };
 
-export type LogicalOperator = "||" | "&&";
+export type LogicalOperator = "||" | "&&" | "and" | "or";
 
 export type SpreadElement = NodeBase & {
   type: "SpreadElement",

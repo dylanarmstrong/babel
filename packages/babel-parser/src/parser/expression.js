@@ -436,7 +436,11 @@ export default class ExpressionParser extends LValParser {
         node.left = left;
         node.operator = this.state.value;
 
-        const logical = op === tt.logicalOR || op === tt.logicalAND;
+        const logical =
+          op === tt.logicalOR ||
+          op === tt.logicalAND ||
+          op === tt.logicalORText ||
+          op === tt.logicalANDText;
         const coalesce = op === tt.nullishCoalescing;
 
         if (coalesce) {
@@ -471,7 +475,11 @@ export default class ExpressionParser extends LValParser {
          */
         const nextOp = this.state.type;
         if (
-          (coalesce && (nextOp === tt.logicalOR || nextOp === tt.logicalAND)) ||
+          (coalesce &&
+            (nextOp === tt.logicalOR ||
+              nextOp === tt.logicalAND ||
+              nextOp === tt.logicalORText ||
+              nextOp === tt.logicalANDText)) ||
           (logical && nextOp === tt.nullishCoalescing)
         ) {
           throw this.raise(this.state.start, Errors.MixingCoalesceWithLogical);

@@ -2103,6 +2103,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@babel/plugin-transform-and-or@workspace:packages/babel-plugin-transform-and-or":
+  version: 0.0.0-use.local
+  resolution: "@babel/plugin-transform-and-or@workspace:packages/babel-plugin-transform-and-or"
+  dependencies:
+    "@babel/core": "workspace:^"
+    "@babel/helper-plugin-test-runner": "workspace:^"
+    "@babel/helper-plugin-utils": "workspace:^"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  languageName: unknown
+  linkType: soft
+
 "@babel/plugin-transform-arrow-functions@npm:^7.16.0":
   version: 7.16.0
   resolution: "@babel/plugin-transform-arrow-functions@npm:7.16.0"
