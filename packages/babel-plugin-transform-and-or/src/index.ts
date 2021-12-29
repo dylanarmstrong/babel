@@ -5,7 +5,7 @@ export default declare(api => {
   api.assertVersion(7);
 
   return {
-    name: "transform-instanceof",
+    name: "transform-and-or",
 
     visitor: {
       LogicalExpression(path) {
